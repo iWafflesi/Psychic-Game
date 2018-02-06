@@ -2,7 +2,6 @@
 $(document).ready(function () {
 
 	// alert("guess a letter from A-Z");
-
 	var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
 		'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -15,7 +14,7 @@ $(document).ready(function () {
 
 
 
-
+// Setting wins and losses
 	document.onkeypress = function (event) {
 		var userGuess = event.key;
 		if (userGuesses.indexOf(userGuess) >= 0){
@@ -37,13 +36,13 @@ $(document).ready(function () {
 
 		}
 
-
+// Displayed guesses
 		document.getElementById('displayedGuesses').innerHTML = userGuesses.join(", ");
-
+// Number of guesses left
 		document.getElementById('guessesLeft').innerHTML = guesses;
 
 	}
-
+// Resetting game funtion
 	function resetGame() {
 		document.getElementById('winsCurrent').innerHTML = wins;
 		document.getElementById('lossesCurrent').innerHTML = losses;
